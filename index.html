@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
+
+    <meta name="theme-color" content="#050510">
+
+    <title>NeuroDream</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>NeuroDream🌙</h1>
+
+            <h2>Smart Sleep Therapy Platform</h2>
+
+            <p>
+                Experience immersive visual therapies designed to promote
+                relaxation, mental wellness and better sleep.
+            </p>
+
+            <button id="fullscreenBtn">
+                ⛶ Enter Fullscreen
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= THERAPY CARDS ================= -->
+
+    <section class="therapy-section">
+
+
+        <!-- DEEP SLEEP -->
+
+        <div
+            class="therapy-card sleep"
+            onclick="startTherapy('sleep')"
+        >
+
+            <div class="overlay"></div>
+
+            <div class="card-content">
+
+                <h3>😴 Deep Sleep Therapy</h3>
+
+                <p>
+                    Designed to prepare the mind for deep restorative sleep.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOREST SERENITY -->
+
+        <div
+            class="therapy-card forest"
+            onclick="startTherapy('forest')"
+        >
+
+            <div class="overlay"></div>
+
+            <div class="card-content">
+
+                <h3>🌲 Forest Serenity</h3>
+
+                <p>
+                    Nature-inspired visuals to reduce stress and calm the mind.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- BLUE SERENITY -->
+
+        <div
+            class="therapy-card blue"
+            onclick="startTherapy('blue')"
+        >
+
+            <div class="overlay"></div>
+
+            <div class="card-content">
+
+                <h3>🔵 Blue Serenity</h3>
+
+                <p>
+                    Gentle blue ambience for relaxation and meditation.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- AMBER AURA -->
+
+        <div
+            class="therapy-card amber"
+            onclick="startTherapy('amber')"
+        >
+
+            <div class="overlay"></div>
+
+            <div class="card-content">
+
+                <h3>🟠 Amber Aura</h3>
+
+                <p>
+                    Warm amber tones for comfort and evening relaxation.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= THERAPY SCREEN ================= -->
+
+    <div id="therapyScreen">
+
+        <!-- Background Image -->
+        <div id="therapyBackground"></div>
+
+        <!-- Automatic Breathing Glow -->
+        <div id="glowLayer"></div>
+
+        <!-- Floating Particles -->
+        <div id="particles"></div>
+
+
+        <!-- ================= DASHBOARD ================= -->
+
+        <div id="dashboard">
+
+
+            <!-- Therapy Name -->
+
+            <h2 id="therapyTitle">
+                Therapy
+            </h2>
+
+
+            <!-- Session Timer -->
+
+            <div class="dashboard-item">
+
+                <span>⏱ Session</span>
+
+                <div id="timer">
+                    00:00
+                </div>
+
+            </div>
+
+
+            <!-- Brightness -->
+
+            <div class="dashboard-item">
+
+                <span>🔆 Brightness</span>
+
+                <input
+                    type="range"
+                    id="brightnessSlider"
+                    min="50"
+                    max="160"
+                    value="100"
+                >
+
+            </div>
+
+
+            <!-- Audio Controls -->
+
+            <div class="dashboard-item audio-section">
+
+                <span>🎧 Binaural Audio</span>
+
+                <button id="audioToggleBtn">
+                    ▶ Play Audio
+                 </button>
+
+                <div class="volume-control">
+
+                    <span>🔊 Volume</span>
+
+                    <input
+                        type="range"
+                        id="volumeSlider"
+                        min="0"
+                        max="100"
+                        value="35"
+                    >
+
+                </div>
+
+                <p class="headphone-note">
+                    🎧 Stereo headphones recommended
+                </p>
+
+            </div>
+
+
+            <!-- Exit Therapy -->
+
+            <button id="exitBtn">
+                ⟵ Exit Therapy
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= AUDIO PLAYER ================= -->
+
+    <audio id="therapyAudio" preload="auto"></audio>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
